@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmbiental.RegistroPage"
+             BackgroundColor="DarkBlue">
+
+    <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center">
+
+        <Label Text="INTRODUZCA SUS DATOS"
+               FontSize="24"
+               HorizontalOptions="Center"
+               TextColor="White"/>
+
+        <Frame CornerRadius="20" BackgroundColor="LightBlue" Padding="5">
+            <Entry x:Name="nameEntry" Placeholder="Nombre" TextColor="Black" WidthRequest="250"/>
+        </Frame>
+
+        <Frame CornerRadius="20" BackgroundColor="LightBlue" Padding="5">
+            <Entry x:Name="ageEntry" Placeholder="Edad" TextColor="Black" WidthRequest="250" Keyboard="Numeric"/>
+        </Frame>
+
+        <Button Text="Registrar"
+                BackgroundColor="White"
+                TextColor="Black"
+                Clicked="OnRegisterClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

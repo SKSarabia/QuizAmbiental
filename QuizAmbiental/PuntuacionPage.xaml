@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmbiental.PuntuacionPage"
+             BackgroundColor="DarkBlue">
+
+    <VerticalStackLayout Padding="40" Spacing="20" HorizontalOptions="Center">
+
+        <Label Text="TABLA DE CLASIFICACIÓN" 
+               FontSize="28"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+
+        <Frame CornerRadius="15" BackgroundColor="Black" Padding="15">
+            <VerticalStackLayout Spacing="15">
+                <Label Text="1. TANK89 - 980 Pts" FontSize="24" TextColor="White"/>
+                <Label Text="2. ROCK102 - 870 Pts" FontSize="24" TextColor="White"/>
+                <Label Text="3. MAYONESO77 - 750 Pts" FontSize="24" TextColor="White"/>
+                <Label Text="4. ING.LOCO1920 - 710 Pts" FontSize="24" TextColor="White"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <!-- Botón para volver al menú principal -->
+        <Button Text="Volver"
+                BackgroundColor="White"
+                TextColor="Black"
+                WidthRequest="150"
+                Clicked="OnVolverClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
