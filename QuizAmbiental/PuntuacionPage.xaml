@@ -19,7 +19,7 @@
             </VerticalStackLayout>
         </Frame>
 
-        <!-- Botón para volver al menú principaal -->
+        <!-- Boton para volver al menu principal -->
         <Button Text="Volver"
                 BackgroundColor="#2E8B57"
                 TextColor="white"
