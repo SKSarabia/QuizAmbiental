@@ -21,7 +21,7 @@
 
         <VerticalStackLayout Margin="0,0,0,20">
             <Button x:Name="btnFacil" Text="Fácil"
-                BackgroundColor="#77DD77"
+                BackgroundColor="#2E8B57"
                 TextColor="white"
                 WidthRequest="150"
                 Margin="0,5,0,5"
@@ -45,8 +45,8 @@
         <!-- Botón comenzar -->
         <Button x:Name="btnComenzar"
             Text="Comenzar"
-            BackgroundColor="#2E8B57"
-            TextColor="White"
+            BackgroundColor="#FFFF00"
+            TextColor="black"
             IsEnabled="False"
             Clicked="OnComenzarQuiz"
             WidthRequest="180"

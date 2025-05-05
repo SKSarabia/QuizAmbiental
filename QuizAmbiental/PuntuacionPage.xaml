@@ -21,8 +21,8 @@
 
         <!-- Botón para volver al menú principaal -->
         <Button Text="Volver"
-                BackgroundColor="#2E8B57"
-                TextColor="white"
+                BackgroundColor="#FFF000"
+                TextColor="black"
                 WidthRequest="150"
                 Clicked="OnVolverClicked"/>
     </VerticalStackLayout>

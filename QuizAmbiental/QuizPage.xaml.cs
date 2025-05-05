@@ -11,14 +11,19 @@ namespace QuizAmbiental
 
         private void OnDificultadSeleccionada(object sender, EventArgs e)
         {
+            // Quitar el borde de los botones de dificultad
+            btnFacil.BorderWidth = 0;
+            btnMedio.BorderWidth = 0;
+            btnDificil.BorderWidth = 0;
+
             if (sender is Button botonSeleccionado)
             {
-                btnFacil.BackgroundColor = Colors.Gray;
-                btnMedio.BackgroundColor = Colors.Gray;
-                btnDificil.BackgroundColor = Colors.Gray;
-
+                // Dificultad seleccionada
                 dificultadSeleccionada = botonSeleccionado.Text;
-                botonSeleccionado.BackgroundColor = Colors.LightGreen;
+
+                // Resaltar la opción seleccionada
+                botonSeleccionado.BorderWidth = 3;
+                botonSeleccionado.BorderColor = Color.FromArgb("#FFFF00");
 
                 // Activar el botón "Comenzar"
                 btnComenzar.IsEnabled = true;

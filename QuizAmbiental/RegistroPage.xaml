@@ -20,8 +20,8 @@
         </Frame>
 
         <Button Text="Registrar"
-                BackgroundColor="#007FFF"
-                TextColor="white"
+                BackgroundColor="#FFF000"
+                TextColor="black"
                 Clicked="OnRegisterClicked"/>
     </VerticalStackLayout>
 </ContentPage>
