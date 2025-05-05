@@ -1,42 +1,42 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.QuizPage"
-             BackgroundColor="DarkBlue">
+             BackgroundColor="#90EE90">
 
     <FlexLayout Direction="Column" AlignItems="Center" Padding="20">
 
         <!-- Tabla de clasificación -->
-        <Frame CornerRadius="10" BackgroundColor="Black" Padding="10" WidthRequest="280" Margin="0,0,0,20">
+        <Frame CornerRadius="10" BackgroundColor="white" Padding="10" WidthRequest="280" Margin="0,0,0,20">
             <VerticalStackLayout>
-                <Label Text="Top Jugadores" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
-                <Label Text="1. TANK89 - 980 Pts" TextColor="White"/>
-                <Label Text="2. ROCK102 - 870 Pts" TextColor="White"/>
-                <Label Text="3. MAYONESO77 - 750 Pts" TextColor="White"/>
-                <Label Text="4. ING.LOCO1920 - 710 Pts" TextColor="White"/>
+                <Label Text="Top Jugadores" FontSize="20" TextColor="#3E8C62" HorizontalOptions="Center"/>
+                <Label Text="1. TANK89 - 980 Pts" TextColor="black"/>
+                <Label Text="2. ROCK102 - 870 Pts" TextColor="black"/>
+                <Label Text="3. MAYONESO77 - 750 Pts" TextColor="black"/>
+                <Label Text="4. ING.LOCO1920 - 710 Pts" TextColor="black"/>
             </VerticalStackLayout>
         </Frame>
 
         <!-- Selección de dificultad -->
-        <Label Text="ESCOGE TU DIFICULTAD" FontSize="22" TextColor="White" HorizontalOptions="Center" Margin="0,10,0,10"/>
+        <Label Text="ESCOGE TU DIFICULTAD" FontSize="22" TextColor="#3E8C62" HorizontalOptions="Center" Margin="0,10,0,10"/>
 
         <VerticalStackLayout Margin="0,0,0,20">
             <Button x:Name="btnFacil" Text="Fácil"
-                BackgroundColor="Gray"
-                TextColor="Black"
+                BackgroundColor="#77DD77"
+                TextColor="white"
                 WidthRequest="150"
                 Margin="0,5,0,5"
                 Clicked="OnDificultadSeleccionada"/>
 
             <Button x:Name="btnMedio" Text="Medio"
-                BackgroundColor="Gray"
-                TextColor="Black"
+                BackgroundColor="#FFB347"
+                TextColor="white"
                 WidthRequest="150"
                 Margin="0,5,0,5"
                 Clicked="OnDificultadSeleccionada"/>
 
             <Button x:Name="btnDificil" Text="Difícil"
-                BackgroundColor="Gray"
-                TextColor="Black"
+                BackgroundColor="#E57373"
+                TextColor="white"
                 WidthRequest="150"
                 Margin="0,5,0,5"
                 Clicked="OnDificultadSeleccionada"/>
@@ -45,8 +45,8 @@
         <!-- Botón comenzar -->
         <Button x:Name="btnComenzar"
             Text="Comenzar"
-            BackgroundColor="White"
-            TextColor="Black"
+            BackgroundColor="#2E8B57"
+            TextColor="White"
             IsEnabled="False"
             Clicked="OnComenzarQuiz"
             WidthRequest="180"
