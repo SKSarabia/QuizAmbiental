@@ -1,3 +1,6 @@
+using QuizAmbiental.Helpers;
+using QuizAmbiental.Models;
+
 namespace QuizAmbiental
 {
     public partial class QuizPage : ContentPage
@@ -7,7 +10,40 @@ namespace QuizAmbiental
         public QuizPage()
         {
             InitializeComponent();
+            PopulateRankingTable();
         }
+
+        // Tabla de puntuaciones
+        private void PopulateRankingTable()
+        {
+            rankingList.Children.Clear();
+
+            // Agrega el encabezado
+            rankingList.Children.Add(new Label
+            {
+                Text = "Top Jugadores",
+                FontSize = 20,
+                TextColor = Color.FromArgb("#3E8C62"),
+                HorizontalOptions = LayoutOptions.Center
+            });
+
+            // Obtiene las puntuaciones ordenadas
+            var rankingEntries = ScoreManager.GetScores();
+            int rank = 1;
+            foreach (var entry in rankingEntries)
+            {
+                var lblEntry = new Label
+                {
+                    Text = $"{rank}. {entry.Username} - {entry.Score} Pts",
+                    FontSize = 16,
+                    TextColor = Colors.Black,
+                    Margin = new Thickness(0, 2)
+                };
+                rankingList.Children.Add(lblEntry);
+                rank++;
+            }
+        }
+
 
         private void OnDificultadSeleccionada(object sender, EventArgs e)
         {
@@ -50,6 +86,10 @@ namespace QuizAmbiental
 
             if (quizDestino != null)
                 Navigation.PushAsync(quizDestino);
+        }
+        private async void OnMenuClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
         }
     }
 }

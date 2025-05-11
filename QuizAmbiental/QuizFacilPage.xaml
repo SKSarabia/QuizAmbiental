@@ -2,11 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.QuizFacilPage"
-             Title="QuizFacilPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             BackgroundColor="#90EE90">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <!-- Cronómetro -->
+        <Label x:Name="lblTimer" Text="Tiempo: 0s" FontSize="20" TextColor="#3E8C62" HorizontalOptions="Center" />
+
+        <!-- Pregunta -->
+        <Label x:Name="lblQuestion" 
+               Text="Pregunta" 
+               FontSize="30" 
+               TextColor="Black" 
+               HorizontalOptions="Center" 
+               HorizontalTextAlignment="Center" />
+
+        <!-- Opciones de respuesta -->
+        <VerticalStackLayout Spacing="10">
+            <Button x:Name="btnAnswer0" 
+                    Text="Respuesta 1" 
+                    Clicked="OnAnswerClicked" 
+                    FontSize="18" 
+                    BackgroundColor="LightGray" 
+                    TextColor="Black"/>
+            <Button x:Name="btnAnswer1" 
+                    Text="Respuesta 2" 
+                    Clicked="OnAnswerClicked" 
+                    FontSize="18" 
+                    BackgroundColor="LightGray" 
+                    TextColor="Black"/>
+            <Button x:Name="btnAnswer2" 
+                    Text="Respuesta 3" 
+                    Clicked="OnAnswerClicked" 
+                    FontSize="18" 
+                    BackgroundColor="LightGray" 
+                    TextColor="Black"/>
+            <Button x:Name="btnAnswer3" 
+                    Text="Respuesta 4" 
+                    Clicked="OnAnswerClicked" 
+                    FontSize="18" 
+                    BackgroundColor="LightGray" 
+                    TextColor="Black"/>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

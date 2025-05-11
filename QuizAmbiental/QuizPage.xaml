@@ -7,12 +7,9 @@
 
         <!-- Tabla de clasificación -->
         <Frame CornerRadius="10" BackgroundColor="white" Padding="10" WidthRequest="280" Margin="0,0,0,20">
-            <VerticalStackLayout>
+            <VerticalStackLayout x:Name="rankingList">
                 <Label Text="Top Jugadores" FontSize="20" TextColor="#3E8C62" HorizontalOptions="Center"/>
-                <Label Text="1. TANK89 - 980 Pts" TextColor="black"/>
-                <Label Text="2. ROCK102 - 870 Pts" TextColor="black"/>
-                <Label Text="3. MAYONESO77 - 750 Pts" TextColor="black"/>
-                <Label Text="4. ING.LOCO1920 - 710 Pts" TextColor="black"/>
+                <!-- Las entradas se agregarán automaticamente aqui -->
             </VerticalStackLayout>
         </Frame>
 
@@ -50,6 +47,14 @@
             IsEnabled="False"
             Clicked="OnComenzarQuiz"
             WidthRequest="180"
+            Margin="0,20,0,0"/>
+        
+        <!-- Botón menú -->
+        <Button Text="Menú Principal"
+            BackgroundColor="#FFF000"
+            TextColor="black"
+            WidthRequest="150"
+            Clicked="OnMenuClicked"
             Margin="0,20,0,0"/>
     </FlexLayout>
 </ContentPage>

@@ -1,3 +1,7 @@
+using QuizAmbiental.Models;
+using QuizAmbiental.Helpers;
+using System.Text.RegularExpressions;
+
 namespace QuizAmbiental
 {
     public partial class RegistroPage : ContentPage
@@ -18,16 +22,29 @@ namespace QuizAmbiental
                 return;
             }
 
+            // Valida el nombre
+            if (!Regex.IsMatch(nombre, @"^[a-zA-Z]+$"))
+            {
+                DisplayAlert("Error", "El nombre debe contener solo letras", "OK");
+                return;
+            }
+
+            // Valida la edad
             if (!int.TryParse(edad, out int edadNumerica))
             {
                 DisplayAlert("Error", "La edad debe ser un número válido", "OK");
                 return;
             }
 
-            DisplayAlert("Registro Exitoso", $"Bienvenido {nombre}, edad {edadNumerica} años", "OK");
+            var usuario = new User()
+            {
+                Name = nombre,
+                Age = edadNumerica
+            };
+            UserSession.CurrentUser = usuario;
+            DisplayAlert("Registro Exitoso", $"Bienvenido {usuario.Username}", "OK");
 
-            // Redirigir a la página del Quiz
-            Navigation.PushAsync(new QuizPage());
+            Navigation.PopAsync();
         }
     }
 }

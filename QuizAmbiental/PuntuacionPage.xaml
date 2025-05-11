@@ -11,11 +11,8 @@
                HorizontalOptions="Center"/>
 
         <Frame CornerRadius="15" BackgroundColor="white" Padding="15">
-            <VerticalStackLayout Spacing="15">
-                <Label Text="1. TANK89 - 980 Pts" FontSize="24" TextColor="black"/>
-                <Label Text="2. ROCK102 - 870 Pts" FontSize="24" TextColor="black"/>
-                <Label Text="3. MAYONESO77 - 750 Pts" FontSize="24" TextColor="black"/>
-                <Label Text="4. ING.LOCO1920 - 710 Pts" FontSize="24" TextColor="black"/>
+            <VerticalStackLayout x:Name="rankingListPuntuacion" Spacing="15">
+                <!-- Las entradas se agregarán automaticamente aqui -->
             </VerticalStackLayout>
         </Frame>
 
