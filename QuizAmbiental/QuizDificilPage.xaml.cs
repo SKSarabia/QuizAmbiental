@@ -128,7 +128,7 @@ public partial class QuizDificilPage : ContentPage
         DisplayCurrentQuestion();
     }
 
-    private void OnTimerTick(object sender, EventArgs e)
+    private void OnTimerTick(object? sender, EventArgs e)
     {
         elapsedTime++;
         lblTimer.Text = $"Tiempo: {elapsedTime} s";
@@ -139,7 +139,7 @@ public partial class QuizDificilPage : ContentPage
         if (currentQuestionIndex >= questions.Count)
         {
             timer.Stop();
-            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime));
+            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime, "Difícil"));
             return;
         }
 
@@ -199,4 +199,5 @@ public partial class QuizDificilPage : ContentPage
             case 3: btnAnswer3.BackgroundColor = Colors.Green; break;
         }
     }
+    protected override bool OnBackButtonPressed() => true;
 }

@@ -36,15 +36,24 @@ namespace QuizAmbiental
                 return;
             }
 
-            var usuario = new User()
-            {
-                Name = nombre,
-                Age = edadNumerica
-            };
-            UserSession.CurrentUser = usuario;
-            DisplayAlert("Registro Exitoso", $"Bienvenido {usuario.Username}", "OK");
+            // Guardamos el username (nombre+edad)
+            string username = $"{nombre}{edadNumerica}";
 
-            Navigation.PopAsync();
+            // Usamos el servicio para obtener o crear el usuario.
+            DatabaseService dbService = new DatabaseService();
+            int userId = dbService.GetOrCreateUser(username);
+
+            if (userId == 0)
+            {
+                DisplayAlert("Error", "No se pudo registrar el usuario", "OK");
+                return;
+            }
+            else
+            {
+                UserSession.CurrentUser = new User { Name = nombre, Age = edadNumerica };
+                DisplayAlert("Registro Exitoso", $"Bienvenido {username}", "OK");
+                Navigation.PopAsync();
+            }
         }
     }
 }

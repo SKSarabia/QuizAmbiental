@@ -139,7 +139,7 @@ public partial class QuizMedioPage : ContentPage
         if (currentQuestionIndex >= questions.Count)
         {
             timer.Stop();
-            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime));
+            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime, "Medio"));
             return;
         }
 
@@ -199,4 +199,6 @@ public partial class QuizMedioPage : ContentPage
             case 3: btnAnswer3.BackgroundColor = Colors.Green; break;
         }
     }
+    protected override bool OnBackButtonPressed() => true;
+
 }

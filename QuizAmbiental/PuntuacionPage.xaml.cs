@@ -1,45 +1,58 @@
 using QuizAmbiental.Helpers;
 using QuizAmbiental.Models;
+using System;
 
 namespace QuizAmbiental
 {
     public partial class PuntuacionPage : ContentPage
     {
+        DatabaseService dbService = new DatabaseService();
+        private readonly string[] dificultades = new string[] { "Fácil", "Medio", "Difícil" };
+        private int dificultadIndex = 0;
+
         public PuntuacionPage()
         {
             InitializeComponent();
+            PopulateRankingTable(dificultades[dificultadIndex]);
         }
-        // Tabla de puntuaciones
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            PopulateRankingTable();
+            // Refrescar la tabla al aparecer con el filtro actual
+            PopulateRankingTable(dificultades[dificultadIndex]);
+
+            // Inicia el timer con el Dispatcher (se ejecuta cada 5 segundos)
+            this.Dispatcher.StartTimer(TimeSpan.FromSeconds(5), () =>
+            {
+                // Rotar al siguiente filtro de dificultad
+                dificultadIndex = (dificultadIndex + 1) % dificultades.Length;
+                PopulateRankingTable(dificultades[dificultadIndex]);
+                return true;
+            });
         }
 
-        private void PopulateRankingTable()
+        private void PopulateRankingTable(string filtroDificultad)
         {
             rankingListPuntuacion.Children.Clear();
-
-            // Agrega el encabezado
             rankingListPuntuacion.Children.Add(new Label
             {
-                Text = "Top Jugadores",
+                Text = $"Top Jugadores - {filtroDificultad}",
                 FontSize = 20,
                 TextColor = Color.FromArgb("#3E8C62"),
                 HorizontalOptions = LayoutOptions.Center
             });
 
-            var rankingEntries = ScoreManager.GetScores();
+            var rankingEntries = dbService.GetTopScores(filtroDificultad);
             int rank = 1;
             foreach (var entry in rankingEntries)
             {
-                var lblEntry = new Label
+                rankingListPuntuacion.Children.Add(new Label
                 {
-                    Text = $"{rank}. {entry.Username} - {entry.Score} Pts",
+                    Text = $"{rank}. {entry.Username} - {entry.Score} pts",
                     FontSize = 24,
                     TextColor = Colors.Black
-                };
-                rankingListPuntuacion.Children.Add(lblEntry);
+                });
                 rank++;
             }
         }
