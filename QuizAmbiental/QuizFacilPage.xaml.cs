@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+Ôªøusing System.Collections.Generic;
 using System.Threading.Tasks;
 namespace QuizAmbiental;
 
@@ -14,112 +14,112 @@ public partial class QuizFacilPage : ContentPage
     {
         InitializeComponent();
 
-        // Lista de 10 preguntas f·ciles
+        // Lista de 10 preguntas f√°ciles
         questions = new List<QuizQuestion>
             {
                 new QuizQuestion {
-                    QuestionText = "øPor quÈ es importante reciclar?",
+                    QuestionText = "¬øPor qu√© es importante reciclar?",
                     Answers = new string[] {
-                        "Porque hace que los productos sean m·s caros",
-                        "Porque reduce la cantidad de residuos en el planeta",
-                        "Porque genera m·s contaminaciÛn",
-                        "Porque los materiales reciclados son menos resistentes"
+                        "Aumenta costos",
+                        "Reduce residuos",
+                        "Genera contaminaci√≥n",
+                        "Menos resistencia"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "øQuÈ sucede si desperdiciamos mucha agua?",
+                    QuestionText = "¬øQu√© sucede si desperdiciamos mucha agua?",
                     Answers = new string[] {
-                        "La cantidad de lluvia aumenta",
-                        "No tiene impacto porque el agua es infinita",
-                        "Se gasta un recurso limitado y afecta la vida de muchas especies",
-                        "Mejora la calidad de los rÌos"
+                        "M√°s lluvia",
+                        "Sin impacto, agua infinita",
+                        "Recurso limitado afecta especies",
+                        "R√≠os mejoran calidad"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
-                    QuestionText = "øCÛmo ayudan los ·rboles al planeta?",
+                    QuestionText = "¬øC√≥mo ayudan los √°rboles al planeta?",
                     Answers = new string[] {
-                        "Bloquean la luz del sol",
-                        "Absorben diÛxido de carbono y producen oxÌgeno",
-                        "Reducen la temperatura sin afectar el aire",
-                        "Solo sirven para dar sombra"
+                        "Bloquean luz solar",
+                        "Absorben CO‚ÇÇ, producen ox√≠geno",
+                        "Reducen temperatura sin afectar aire",
+                        "Solo dan sombra"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "øCu·l es una forma de evitar la contaminaciÛn del aire?",
+                    QuestionText = "¬øC√≥mo evitar contaminaci√≥n del aire?",
                     Answers = new string[] {
-                        "Usar bicicleta o transporte p˙blico en lugar de autos",
-                        "Usar ventiladores para mejorar el aire",
-                        "Dejar el motor del auto encendido todo el tiempo",
-                        "Quemar basura lejos de casa"
+                        "Bicicleta o transporte p√∫blico",
+                        "Ventiladores mejoran aire",
+                        "Motor encendido siempre",
+                        "Quemar basura lejos"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "øQuÈ ocurre cuando tiramos basura en los rÌos?",
+                    QuestionText = "¬øQu√© pasa al tirar basura en r√≠os?",
                     Answers = new string[] {
-                        "Los peces la usan como refugio",
-                        "Se contamina el agua y afecta a los animales",
-                        "La basura desaparece con el tiempo",
-                        "El agua se vuelve m·s saludable"
+                        "Peces la usan de refugio",
+                        "Agua contaminada, afecta animales",
+                        "Basura desaparece con el tiempo",
+                        "Agua m√°s saludable"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "øCÛmo podemos cuidar a los animales en peligro de extinciÛn?",
+                    QuestionText = "¬øC√≥mo cuidar animales en peligro?",
                     Answers = new string[] {
-                        "No comprando productos derivados de ellos",
-                        "Caz·ndolos para protegerlos mejor",
-                        "Aliment·ndolos con comida industrial",
-                        "Sac·ndolos de su h·bitat natural"
+                        "No comprar derivados",
+                        "Cazarlos para protegerlos",
+                        "Alimentarlos con comida industrial",
+                        "Sacarlos de su h√°bitat"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "øCu·l es una forma efectiva de reducir el uso de pl·sticos contaminantes?",
+                    QuestionText = "¬øC√≥mo reducir pl√°sticos contaminantes?",
                     Answers = new string[] {
                         "Enterrarlos en el suelo",
-                        "Guardar los pl·sticos sin tirarlos",
-                        "Quemarlos para que desaparezcan",
-                        "Usar bolsas de tela en lugar de bolsas de pl·stico"
+                        "Guardar los pl√°sticos",
+                        "Quemarlos",
+                        "Usar bolsas de tela y no de pl√°stico"
                     },
                     CorrectAnswerIndex = 3
                 },
                 new QuizQuestion {
-                    QuestionText = "øQuÈ impacto tiene el desperdicio de alimentos en el medio ambiente?",
+                    QuestionText = "¬øImpacto del desperdicio de alimentos?",
                     Answers = new string[] {
-                        "Hace que los animales tengan m·s comida",
-                        "Mejora la calidad del suelo",
-                        "Aumenta la cantidad de desechos org·nicos y la contaminaciÛn",
-                        "No tiene impacto porque los alimentos se descomponen"
+                        "M√°s comida para animales",
+                        "Mejora suelo",
+                        "M√°s desechos y contaminaci√≥n",
+                        "Sin impacto, se descomponen"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
-                    QuestionText = "øCu·l es una acciÛn sostenible que podemos hacer en casa?",
+                    QuestionText = "¬øAcci√≥n sostenible en casa?",
                     Answers = new string[] {
-                        "Comprar m·s productos pl·sticos",
-                        "Reducir el consumo de energÌa y agua",
-                        "Usar m·s electricidad en las noches",
-                        "Tirar la basura en espacios abiertos"
+                        "M√°s productos pl√°sticos",
+                        "Menos energ√≠a y agua",
+                        "M√°s electricidad en noches",
+                        "Basura en espacios abiertos"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "øCÛmo podemos ayudar a reducir el calentamiento global?",
+                    QuestionText = "¬øC√≥mo ayudar al calentamiento global?",
                     Answers = new string[] {
-                        "Plantando m·s ·rboles",
-                        "Usando m·s gasolina en los autos",
-                        "Deforestando los bosques",
-                        "Fabricando m·s pl·sticos"
+                        "Plantando m√°s √°rboles",
+                        "Usando m√°s gasolina",
+                        "Deforestando bosques",
+                        "Fabricando m√°s pl√°sticos"
                     },
                     CorrectAnswerIndex = 0
                 }
             };
 
-        // Inicializar el cronÛmetro: se actualiza cada segundo
+        // Inicializar el cron√≥metro: se actualiza cada segundo
         timer = Dispatcher.CreateTimer();
         timer.Interval = TimeSpan.FromSeconds(1);
         timer.Tick += OnTimerTick;
@@ -139,7 +139,7 @@ public partial class QuizFacilPage : ContentPage
         if (currentQuestionIndex >= questions.Count)
         {
             timer.Stop();
-            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime, "F·cil"));
+            Navigation.PushAsync(new ScorePage(correctAnswers, elapsedTime, "F√°cil"));
             return;
         }
 

@@ -18,57 +18,57 @@ public partial class QuizMedioPage : ContentPage
         questions = new List<QuizQuestion>
             {
                 new QuizQuestion {
-                    QuestionText = "¿Por qué la deforestación es un problema grave para el medio ambiente?",
+                    QuestionText = "¿Por qué la deforestación es un problema grave?",
                     Answers = new string[] {
-                        "Porque reduce el espacio para construir casas",
-                        "Porque los árboles crecen demasiado rápido",
-                        "Porque destruye el hábitat de animales y afecta el ciclo del agua",
-                        "Porque deja más espacio para el ganado"
+                        "Menos espacio para casas",
+                        "Árboles crecen rápido",
+                        "Destruye hábitats",
+                        "Más espacio para ganado"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo afecta la contaminación del aire a la salud de las personas?",
+                    QuestionText = "¿Cómo afecta la contaminación del aire a la salud?",
                     Answers = new string[] {
-                        "No tiene efecto en la salud",
-                        "Puede causar enfermedades respiratorias",
-                        "Hace que el aire huela mejor",
-                        "Reduce la cantidad de oxígeno en los pulmones"
+                        "Sin efecto en salud",
+                        "Enfermedades respiratorias",
+                        "Aire huele mejor",
+                        "Menos oxígeno en pulmones"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cuál es el problema del uso excesivo de fertilizantes químicos?",
+                    QuestionText = "¿Problema del uso excesivo de fertilizantes?",
                     Answers = new string[] {
-                        "Contaminan los suelos y el agua",
-                        "Hacen que las plantas sean más resistentes",
-                        "Ayudan a reducir la contaminación",
-                        "No afectan el medio ambiente"
+                        "Contaminan suelo y agua",
+                        "Plantas más resistentes",
+                        "Reducen contaminación",
+                        "No afectan ambiente"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
                     QuestionText = "¿Cómo afectan los plásticos a los océanos?",
                     Answers = new string[] {
-                        "Dañan la vida marina y tardan años en degradarse",
-                        "Ayudan a los peces a esconderse",
-                        "Mejoran la calidad del agua",
-                        "Desaparecen rápidamente"
+                        "Dañan vida marina, tardan años",
+                        "Esconden peces",
+                        "Mejoran agua",
+                        "Desaparecen rápido"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cuál es el impacto de los gases de efecto invernadero?",
+                    QuestionText = "¿Impacto de los gases de efecto invernadero?",
                     Answers = new string[] {
                         "Enfrían el clima",
-                        "Aumentan la temperatura del planeta",
-                        "Purifican el aire",
-                        "Generan más oxígeno"
+                        "Aumentan temperatura",
+                        "Purifican aire",
+                        "Generan oxígeno"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Qué sucede cuando un ecosistema pierde muchas especies?",
+                    QuestionText = "¿Qué pasa si un ecosistema pierde especies?",
                     Answers = new string[] {
                         "Mejora su sostenibilidad",
                         "Se vuelve más fuerte",
@@ -78,27 +78,27 @@ public partial class QuizMedioPage : ContentPage
                     CorrectAnswerIndex = 3
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Por qué es importante proteger los arrecifes de coral?",
+                    QuestionText = "¿Por qué proteger los arrecifes de coral?",
                     Answers = new string[] {
-                        "Son inútiles para el ecosistema",
-                        "Se pueden reemplazar fácilmente",
-                        "No tienen función en el océano",
-                        "Son el hogar de muchas especies marinas"
+                        "Inútiles para el ecosistema",
+                        "Se reemplazan fácil",
+                        "Sin función en océano",
+                        "Hogar de especies marinas"
                     },
                     CorrectAnswerIndex = 3
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Qué podemos hacer para reducir nuestra huella ecológica?",
+                    QuestionText = "¿Cómo reducir nuestra huella ecológica?",
                     Answers = new string[] {
-                        "Usando menos agua y energía",
-                        "Talando más bosques",
-                        "No preocuparnos por el medio ambiente",
-                        "Consumir más productos plásticos"
+                        "Menos agua y energía",
+                        "Talando bosques",
+                        "No preocuparse por ambiente",
+                        "Más productos plásticos"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo influye el derretimiento de los glaciares en el nivel del mar?",
+                    QuestionText = "¿Derretimiento de glaciares y nivel del mar?",
                     Answers = new string[] {
                         "No tiene impacto en los océanos",
                         "Aumenta el nivel del mar",
@@ -108,12 +108,12 @@ public partial class QuizMedioPage : ContentPage
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo podemos restaurar un ecosistema dañado?",
+                    QuestionText = "¿Cómo restaurar un ecosistema dañado?",
                     Answers = new string[] {
-                        "Reforestando y protegiendo especies",
-                        "Construyendo fábricas",
-                        "Cazando más animales",
-                        "Usando productos químicos en los ríos"
+                        "Reforestar y proteger especies",
+                        "Construir fábricas",
+                        "Cazar más animales",
+                        "Usar químicos en ríos"
                     },
                     CorrectAnswerIndex = 0
                 }

@@ -20,104 +20,105 @@ public partial class QuizDificilPage : ContentPage
                 new QuizQuestion {
                     QuestionText = "¿Cómo afecta la deforestación al ciclo del agua?",
                     Answers = new string[] {
-                        "Hace que haya más lluvias en la región",
-                        "Mejora la calidad del agua potable",
-                        "Reduce la capacidad del suelo para retener agua, afectando la disponibilidad de ríos y lagos",
-                        "No tiene impacto en el ciclo del agua"
+                        "Más lluvias en la región",
+                        "Mejora agua potable",
+                        "Menos retención de agua, afecta ríos y lagos",
+                        "Sin impacto en ciclo del agua"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
                     QuestionText = "¿Por qué el calentamiento global afecta más a los polos?",
                     Answers = new string[] {
-                        "Porque el agua se congela menos en invierno",
-                        "Porque el clima se vuelve más seco",
-                        "Porque los hielos se derriten y aumentan el nivel del mar",
-                        "Porque los animales necesitan más calor para sobrevivir"
+                        "Menos agua congelada en invierno",
+                        "Clima más seco",
+                        "Hielos derriten, sube nivel del mar",
+                        "Animales necesitan más calor"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cuál es el impacto de los residuos industriales en los ecosistemas acuáticos?",
+                    QuestionText = "¿Impacto de residuos industriales en ecosistemas acuáticos?",
                     Answers = new string[] {
-                        "No tienen efecto porque el agua filtra las toxinas naturalmente",
-                        "Contaminan el agua, afectando la flora y fauna acuática",
-                        "Mejoran el crecimiento de los corales",
-                        "Ayudan a purificar el agua en los ríos"
+                        "Agua filtra toxinas, sin efecto",
+                        "Contaminan agua, afectan flora y fauna",
+                        "Mejoran crecimiento de corales",
+                        "Purifican agua en ríos"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Qué papel juega la acidificación de los océanos en el equilibrio marino?",
+                    QuestionText = "¿Acidificación de océanos y equilibrio marino?",
                     Answers = new string[] {
-                        "Debilita las conchas y esqueletos de organismos marinos como corales y moluscos",
-                        "Permite que los peces sean más resistentes",
-                        "Reduce la cantidad de oxígeno en los mares",
-                        "No afecta a la biodiversidad marina"
+                        "Debilita conchas y esqueletos",
+                        "Peces más resistentes",
+                        "Menos oxígeno en mares",
+                        "Sin impacto en biodiversidad"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Por qué las especies invasoras pueden dañar los ecosistemas?",
+                    QuestionText = "¿Por qué especies invasoras dañan ecosistemas?",
                     Answers = new string[] {
-                        "Porque reemplazan a las especies más débiles, fortaleciendo el ecosistema",
-                        "Porque mejoran la biodiversidad local",
-                        "Porque ayudan a otras especies a evolucionar más rápido",
-                        "Porque compiten por recursos con las especies nativas y pueden desequilibrar el ecosistema"
+                        "Reemplazan especies débiles",
+                        "Mejoran biodiversidad local",
+                        "Aceleran evolución de especies",
+                        "Compiten por recursos, desequilibran ecosistema"
                     },
                     CorrectAnswerIndex = 3
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo afecta el derretimiento de los glaciares al nivel del mar?",
+                    QuestionText = "¿Derretimiento de glaciares y nivel del mar?",
                     Answers = new string[] {
-                        "Hace que el agua de los océanos se enfríe más",
-                        "Provoca un aumento en el nivel del mar, afectando zonas costeras",
-                        "Genera más lluvias en zonas desérticas",
-                        "Mejora la calidad del agua para el consumo humano"
+                        "Agua oceánica más fría",
+                        "Aumenta nivel del mar, afecta costas",
+                        "Más lluvias en desiertos",
+                        "Mejor calidad del agua"
                     },
                     CorrectAnswerIndex = 1
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cuál es el problema de la sobreexplotación pesquera?",
+                    QuestionText = "¿Problema de la sobreexplotación pesquera?",
                     Answers = new string[] {
-                        "Reduce las poblaciones de peces y afecta la cadena alimenticia marina",
-                        "Genera más oportunidades económicas sin impacto ecológico",
-                        "Mejora el equilibrio ecológico",
-                        "Permite que otras especies crezcan más rápido"
+                        "Menos peces, afecta cadena alimenticia",
+                        "Más oportunidades económicas sin impacto",
+                        "Mejora equilibrio ecológico",
+                        "Otras especies crecen más rápido"
                     },
                     CorrectAnswerIndex = 0
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo afecta la contaminación de los suelos a la agricultura?",
+                    QuestionText = "¿Contaminación de suelos y agricultura?",
                     Answers = new string[] {
-                        "Acelera el crecimiento de las plantas",
-                        "No tiene impacto en la calidad de los alimentos",
-                        "Genera más nutrientes naturales en el suelo",
-                        "Reduce la fertilidad del suelo, afectando la producción de cultivos"
+                        "Acelera crecimiento de plantas",
+                        "Sin impacto en calidad de alimentos",
+                        "Más nutrientes naturales en suelo",
+                        "Menos fertilidad, afecta cultivos"
                     },
                     CorrectAnswerIndex = 3
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cómo pueden los parques naturales ayudar a conservar la biodiversidad?",
+                    QuestionText = "¿Parques naturales y biodiversidad?",
                     Answers = new string[] {
-                        "Ayudan a talar árboles de manera más eficiente",
-                        "Permiten que los humanos domestiquen especies silvestres",
-                        "Protegen especies y hábitats de la actividad humana destructiva",
-                        "Facilitan la expansión de ciudades dentro de áreas protegidas"
+                        "Talan árboles más eficiente",
+                        "Humanidad doméstica especies",
+                        "Protegen hábitats de daño humano",
+                        "Ciudades crecen en áreas protegidas"
                     },
                     CorrectAnswerIndex = 2
                 },
                 new QuizQuestion {
-                    QuestionText = "¿Cuál es el impacto de los derrames de petróleo en los océanos?",
+                    QuestionText = "¿Impacto de derrames de petróleo en océanos?",
                     Answers = new string[] {
-                        "Aumentan la temperatura del agua, beneficiando la biodiversidad",
-                        "No tienen efecto en los ecosistemas marinos",
-                        "Contaminan el agua y afectan la vida marina durante años",
-                        "Se disuelven rápidamente sin dejar contaminación"
+                        "Más temperatura, beneficia biodiversidad",
+                        "Sin efecto en ecosistemas marinos",
+                        "Contaminan agua, afectan vida marina años",
+                        "Se disuelven rápido, sin contaminación"
                     },
                     CorrectAnswerIndex = 2
                 }
             };
+
 
         // Inicializar el cronómetro
         timer = Dispatcher.CreateTimer();
