@@ -94,4 +94,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Platforms\Android\Resources\Drawable\" />
+	</ItemGroup>
+
 </Project>

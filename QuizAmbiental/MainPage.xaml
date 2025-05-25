@@ -5,11 +5,16 @@
              BackgroundColor="#90EE90">
 
     <VerticalStackLayout Padding="20" Spacing="20">
+        <Image Source="logo.png"
+               HeightRequest="120"
+               WidthRequest="120"
+               HorizontalOptions="Center"/>
+
         <Label Text="Bienvenido Usuario" 
                FontSize="24"
                HorizontalOptions="Center"
                TextColor="#3E8C62"/>
-
+        
         <Button x:Name="btnStart"
                 Text="Start"
                 BackgroundColor="#2E8B57"
