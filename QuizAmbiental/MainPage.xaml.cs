@@ -51,5 +51,11 @@ namespace QuizAmbiental
         {
             Navigation.PushAsync(new PuntuacionPage());
         }
+
+        private async void OnSobreNosotrosClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SobreNosotrosPage());
+        }
+
     }
 }

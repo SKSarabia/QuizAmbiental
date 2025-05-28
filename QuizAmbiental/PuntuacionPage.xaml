@@ -3,7 +3,10 @@
              x:Class="QuizAmbiental.PuntuacionPage"
              BackgroundColor="#90EE90">
 
-    <VerticalStackLayout Padding="40" Spacing="20" HorizontalOptions="Center">
+    <VerticalStackLayout 
+        Spacing="20"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand">
 
         <Label Text="TABLA DE CLASIFICACIÓN" 
                FontSize="28"
@@ -16,7 +19,6 @@
             </VerticalStackLayout>
         </Frame>
 
-        <!-- Botón para volver al menú principaal -->
         <Button Text="Volver"
                 BackgroundColor="#FFF000"
                 TextColor="black"

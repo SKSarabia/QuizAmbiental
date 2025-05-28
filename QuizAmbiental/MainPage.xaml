@@ -32,5 +32,11 @@
                 BackgroundColor="#2E8B57"
                 TextColor="white"
                 Clicked="OnPuntuacionClicked"/>
+
+        <Button Text="Sobre nosotros"
+        BackgroundColor="#2E8B57"
+        TextColor="white"
+        Clicked="OnSobreNosotrosClicked"/>
+
     </VerticalStackLayout>
 </ContentPage>
