@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizAmbiental.AdminPage"
+             BackgroundColor="#90EE90">
+
+    <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center">
+
+        <Label Text="ADMINISTRACIÓN DE USUARIOS"
+               FontSize="24"
+               HorizontalOptions="Center"
+               TextColor="#3E8C62"/>
+
+        <!-- Registro de usuario -->
+        <Frame CornerRadius="20" BackgroundColor="#77DD77" Padding="5">
+            <Entry x:Name="nameEntry" Placeholder="Nombre" TextColor="black" WidthRequest="250"/>
+        </Frame>
+        <Frame CornerRadius="20" BackgroundColor="#77DD77" Padding="5">
+            <Entry x:Name="ageEntry" Placeholder="Edad" TextColor="black" WidthRequest="250" Keyboard="Numeric"/>
+        </Frame>
+        <Button Text="Registrar Usuario"
+                BackgroundColor="#FFF000"
+                TextColor="black"
+                Clicked="OnRegisterClicked"/>
+
+        <!-- Lista de usuarios -->
+        <Label Text="Usuarios registrados:" FontSize="18" TextColor="#3E8C62" Margin="0,20,0,0"/>
+        <CollectionView x:Name="usuariosList" HeightRequest="200" SelectionMode="Single" SelectionChanged="OnUsuarioSeleccionado">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="10" BackgroundColor="#F5F5F5" Padding="10" Margin="0,5">
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding Username}" FontSize="16" TextColor="#2E8B57" />
+                            <Label Text="{Binding Edad}" FontSize="16" TextColor="#2E8B57" Margin="10,0,0,0"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Edición de usuario seleccionado -->
+        <Frame x:Name="editFrame" CornerRadius="20" BackgroundColor="#77DD77" Padding="10" IsVisible="False">
+            <Label Text="Editar usuario:" FontSize="18" TextColor="#3E8C62"/>
+            <Entry x:Name="editNameEntry" Placeholder="Nuevo nombre" TextColor="black" WidthRequest="250"/>
+            <Entry x:Name="editAgeEntry" Placeholder="Nueva edad" TextColor="black" WidthRequest="250" Keyboard="Numeric"/>
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Actualizar" BackgroundColor="#3E8C62" TextColor="White" Clicked="OnActualizarUsuario"/>
+                <Button Text="Eliminar" BackgroundColor="Red" TextColor="White" Clicked="OnEliminarUsuario"/>
+                <Button Text="Cancelar" BackgroundColor="#F5F5F5" TextColor="Black" Clicked="OnCancelarEdicion"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Cerrar sesión admin"
+                BackgroundColor="#3E8C62"
+                TextColor="White"
+                Clicked="OnCerrarSesionAdmin"
+                Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -65,12 +65,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="AdminPage.xaml.cs">
+	    <DependentUpon>AdminPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ScorePage.xaml.cs">
 	    <DependentUpon>ScorePage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ConfiguracionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ScorePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -89,7 +98,7 @@
 	  <MauiXaml Update="QuizPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RegistroPage.xaml">
+	  <MauiXaml Update="AdminPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SobreNosotrosPage.xaml">
