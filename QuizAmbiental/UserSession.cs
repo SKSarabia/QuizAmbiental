@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuizAmbiental.Helpers
+﻿namespace QuizAmbiental.Models
 {
     public static class UserSession
     {
-        public static Models.User CurrentUser { get; set; }
-        public static string Dificultad { get; set; } = "";
+        public static User? CurrentUser { get; set; }
+        public static string? Dificultad { get; set; }
     }
 }

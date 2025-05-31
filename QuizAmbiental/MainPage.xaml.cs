@@ -1,6 +1,7 @@
 ﻿using QuizAmbiental.Helpers;
 using System;
 using Microsoft.Maui.Controls;
+using QuizAmbiental.Models;
 
 namespace QuizAmbiental
 {
@@ -18,7 +19,7 @@ namespace QuizAmbiental
             // Activa el botón de Start solo si hay usuario registrado
             bool isRegistered = (UserSession.CurrentUser != null);
             btnStart.IsEnabled = isRegistered;
-            btnRegistro.Text = isRegistered ? "Cerrar sesión" : "Registrarse";
+            btnLogin.Text = isRegistered ? "Cerrar sesión" : "Iniciar sesión";
         }
 
         private void OnStartClicked(object sender, EventArgs e)
@@ -26,11 +27,11 @@ namespace QuizAmbiental
             Navigation.PushAsync(new QuizPage());
         }
 
-        private async void OnRegistroClicked(object sender, EventArgs e)
+        private async void OnLoginClicked(object sender, EventArgs e)
         {
             if (UserSession.CurrentUser == null)
             {
-                await Navigation.PushAsync(new RegistroPage());
+                await Navigation.PushAsync(new LoginPage());
             }
             else
             {
@@ -39,9 +40,8 @@ namespace QuizAmbiental
                 {
                     // Se cierra la sesión
                     UserSession.CurrentUser = null;
-                    // Botón Start deshabilitado
                     btnStart.IsEnabled = false;
-                    btnRegistro.Text = "Registrarse";
+                    btnLogin.Text = "Iniciar sesión";
                     await DisplayAlert("Sesión Cerrada", "Has cerrado sesión", "OK");
                 }
             }
@@ -57,5 +57,9 @@ namespace QuizAmbiental
             await Navigation.PushAsync(new SobreNosotrosPage());
         }
 
+        private async void OnConfiguracionClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConfiguracionPage());
+        }
     }
 }

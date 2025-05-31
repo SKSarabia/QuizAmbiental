@@ -14,7 +14,7 @@
                FontSize="24"
                HorizontalOptions="Center"
                TextColor="#3E8C62"/>
-        
+
         <Button x:Name="btnStart"
                 Text="Start"
                 BackgroundColor="#2E8B57"
@@ -22,21 +22,29 @@
                 IsEnabled="False"
                 Clicked="OnStartClicked"/>
 
-        <Button x:Name="btnRegistro"
-                Text="Registrarse"
+        <Button x:Name="btnLogin"
+                Text="Iniciar Sesión"
                 BackgroundColor="#2E8B57"
-                TextColor="white"
-                Clicked="OnRegistroClicked"/>
+                TextColor="White"
+                Clicked="OnLoginClicked"/>
 
-        <Button Text="Puntuación"
+        <Button x:Name="btnPuntuacion"
+                Text="Puntuación"
                 BackgroundColor="#2E8B57"
                 TextColor="white"
                 Clicked="OnPuntuacionClicked"/>
 
-        <Button Text="Sobre nosotros"
-        BackgroundColor="#2E8B57"
-        TextColor="white"
-        Clicked="OnSobreNosotrosClicked"/>
+        <Button x:Name="btnConfiguracion"
+                Text="Configuración"
+                BackgroundColor="#2E8B57"
+                TextColor="White"
+                Clicked="OnConfiguracionClicked"/>
+
+        <Button x:Name="btnSobreNosotros"
+                Text="Sobre nosotros"
+                BackgroundColor="#2E8B57"
+                TextColor="white"
+                Clicked="OnSobreNosotrosClicked"/>
 
     </VerticalStackLayout>
 </ContentPage>

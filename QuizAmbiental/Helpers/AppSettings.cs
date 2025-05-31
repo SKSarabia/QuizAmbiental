@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using Microsoft.Maui.Storage;
 
 namespace QuizAmbiental.Helpers
 {
     public static class AppSettings
     {
-        public static string ConnectionString = "server=127.0.0.1;port=3307;user id=root;password=Luis12345;database=quizdb;";
+        public static string ConnectionString = Path.Combine(FileSystem.AppDataDirectory, "quizambiental.db3");
     }
 }

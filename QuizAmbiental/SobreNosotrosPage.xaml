@@ -18,7 +18,7 @@
                            HeightRequest="180"
                            Aspect="AspectFill"
                            HorizontalOptions="Center"/>
-                    <Label Text="Diego Flores"
+                    <Label Text="Yeslie Sanchez"
                            FontSize="20"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
@@ -33,52 +33,7 @@
                            HeightRequest="180"
                            Aspect="AspectFill"
                            HorizontalOptions="Center"/>
-                    <Label Text="Angel Ramos"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           TextColor="#222"/>
-                </VerticalStackLayout>
-            </Frame>
-
-            <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="dev3.png"
-                           WidthRequest="180"
-                           HeightRequest="180"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
-                    <Label Text="Yeslie Sanchez"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           TextColor="#222"/>
-                </VerticalStackLayout>
-            </Frame>
-
-            <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="dev4.png"
-                           WidthRequest="180"
-                           HeightRequest="180"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
                     <Label Text="Luis Sarabia"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           TextColor="#222"/>
-                </VerticalStackLayout>
-            </Frame>
-
-            <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="dev5.png"
-                           WidthRequest="180"
-                           HeightRequest="180"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
-                    <Label Text="Derek Tirado"
                            FontSize="20"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
