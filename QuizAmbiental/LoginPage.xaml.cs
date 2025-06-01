@@ -40,6 +40,13 @@ public partial class LoginPage : ContentPage
         {
             await DisplayAlert("Error", "Usuario no registrado", "OK");
         }
+
+        if (usuario != null)
+        {
+            UserSession.CurrentUser = new User { Name = usuario.Username, Age = 0 };
+            Preferences.Set("UserName", usuario.Username);
+            await Navigation.PopToRootAsync();
+        }
     }
 
     private async void OnVolverClicked(object sender, EventArgs e)

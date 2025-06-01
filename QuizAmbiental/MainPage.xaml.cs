@@ -2,6 +2,7 @@
 using System;
 using Microsoft.Maui.Controls;
 using QuizAmbiental.Models;
+using Microsoft.Maui.Storage;
 
 namespace QuizAmbiental
 {
@@ -38,8 +39,9 @@ namespace QuizAmbiental
                 bool confirm = await DisplayAlert("Cerrar sesión", "¿Estás seguro de que deseas cerrar sesión?", "Sí", "No");
                 if (confirm)
                 {
-                    // Se cierra la sesión
                     UserSession.CurrentUser = null;
+                    Preferences.Remove("UserName");
+                    Preferences.Remove("UserAge");
                     btnStart.IsEnabled = false;
                     btnLogin.Text = "Iniciar sesión";
                     await DisplayAlert("Sesión Cerrada", "Has cerrado sesión", "OK");

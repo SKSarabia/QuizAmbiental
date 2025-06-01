@@ -1,7 +1,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.QuizPage"
-             BackgroundColor="#90EE90">
+             BackgroundColor="#90EE90"
+             NavigationPage.HasNavigationBar="False">
 
     <FlexLayout Direction="Column" AlignItems="Center" Padding="20">
 
