@@ -1,52 +1,84 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.SobreNosotrosPage"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="24">
-            <Label Text="Desarrolladores"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#2E8B57"/>
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="24">
+                <Label Text="Desarrolladores"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#2E8B57"/>
 
-            <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="dev1.png"
-                           WidthRequest="180"
-                           HeightRequest="180"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
-                    <Label Text="Yeslie Sanchez"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           TextColor="#222"/>
-                </VerticalStackLayout>
-            </Frame>
+                <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                        <Image x:Name="Dev1Image"
+                               Source="dev1.png"
+                               WidthRequest="180"
+                               HeightRequest="180"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="dev1.png"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Yeslie Sanchez"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="#222"/>
+                    </VerticalStackLayout>
+                </Frame>
 
-            <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="dev2.png"
-                           WidthRequest="180"
-                           HeightRequest="180"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"/>
-                    <Label Text="Luis Sarabia"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           TextColor="#222"/>
-                </VerticalStackLayout>
-            </Frame>
+                <Frame CornerRadius="20" Padding="16" Margin="0,0,0,8" BackgroundColor="#F5F5F5" HasShadow="True">
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                        <Image x:Name="Dev2Image"
+                               Source="dev2.png"
+                               WidthRequest="180"
+                               HeightRequest="180"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="dev2.png"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Luis Sarabia"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="#222"/>
+                    </VerticalStackLayout>
+                </Frame>
 
-            <Label Text="¡Gracias por jugar y aprender con nosotros!"
-                   FontSize="16"
-                   TextColor="#2E8B57"
-                   HorizontalOptions="Center"
-                   Margin="0,16,0,0"/>
-        </VerticalStackLayout>
-    </ScrollView>
+                <Label Text="¡Gracias por jugar y aprender con nosotros!"
+                       FontSize="16"
+                       TextColor="#2E8B57"
+                       HorizontalOptions="Center"
+                       Margin="0,16,0,0"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <ContentView x:Name="ImagePopup"
+                     IsVisible="False"
+                     BackgroundColor="#80000000"
+                     VerticalOptions="Fill"
+                     HorizontalOptions="Fill">
+            <Grid>
+                <Image x:Name="PopupImage"
+                       Aspect="AspectFit"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       WidthRequest="350"
+                       HeightRequest="350"/>
+                <BoxView BackgroundColor="Transparent">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPopupTapped"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </Grid>
+        </ContentView>
+    </Grid>
 </ContentPage>
-

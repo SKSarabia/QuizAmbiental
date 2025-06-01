@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.ScorePage"
-             BackgroundColor="#90EE90">
+             BackgroundColor="#90EE90"
+             NavigationPage.HasNavigationBar="False">
+    
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center">
 

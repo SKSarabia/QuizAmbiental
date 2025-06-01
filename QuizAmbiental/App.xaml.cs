@@ -1,4 +1,5 @@
 ﻿using QuizAmbiental.Models;
+using QuizAmbiental.Helpers;
 using Microsoft.Maui.Storage;
 using Microsoft.Maui.ApplicationModel;
 namespace QuizAmbiental
@@ -9,14 +10,19 @@ namespace QuizAmbiental
         {
             InitializeComponent();
             Application.Current.UserAppTheme = AppTheme.Light;
-            // Restaurar usuario al entrar a la aplicación
-            if (Preferences.ContainsKey("UserName") && Preferences.ContainsKey("UserAge"))
+
+            // Restaurar usuario desde la base de datos si hay sesión guardada
+            if (Preferences.ContainsKey("UserName"))
             {
                 string name = Preferences.Get("UserName", string.Empty);
-                int age = Preferences.Get("UserAge", 0);
-                if (!string.IsNullOrEmpty(name) && age > 0)
+                if (!string.IsNullOrEmpty(name))
                 {
-                    UserSession.CurrentUser = new User { Name = name, Age = age };
+                    var db = new DatabaseService();
+                    var usuario = db.GetUsuarioByUsername(name);
+                    if (usuario != null)
+                    {
+                        UserSession.CurrentUser = new User { Name = usuario.Username, Age = 0 };
+                    }
                 }
             }
 

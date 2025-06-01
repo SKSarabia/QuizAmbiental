@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuizAmbiental.QuizMedioPage"
-             BackgroundColor="#90EE90">
+             BackgroundColor="#90EE90"
+             NavigationPage.HasNavigationBar="False">
+    
     <VerticalStackLayout Padding="20" Spacing="20">
         <!-- Cronómetro -->
         <Label x:Name="lblTimer" Text="Tiempo: 0s" FontSize="20" TextColor="#3E8C62" HorizontalOptions="Center" />
